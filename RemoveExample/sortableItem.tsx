@@ -1,7 +1,7 @@
 import { useSortable, defaultAnimateLayoutChanges } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-const Sortable = ({ key, name, index, onRemove }) => {
+const SortableItem = ({ key, name, index, onRemove }) => {
   const animateLayoutChanges = (args) =>
     defaultAnimateLayoutChanges({ ...args, wasDragging: true });
 
@@ -44,4 +44,4 @@ const Sortable = ({ key, name, index, onRemove }) => {
     </div>
   );
 };
-export default Sortable;
+export default SortableItem;
