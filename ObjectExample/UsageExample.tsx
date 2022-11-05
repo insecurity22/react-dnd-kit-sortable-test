@@ -1,7 +1,7 @@
 import SortableList from "components/sortable/sortableList";
 
 export default function UsageExample() {
-  const data = [
+  const datas = [
     {
       id: 1,
       type: 1,
@@ -25,6 +25,6 @@ export default function UsageExample() {
   ];
   
   return (
-    <SortableList datalist={data} />
+    <SortableList datalist={datas.map((data) => [[], data.name])} />
   );
 }
