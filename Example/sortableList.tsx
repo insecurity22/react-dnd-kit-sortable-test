@@ -71,6 +71,7 @@ const SortableList = ({ datalist, buttonName, buttonOnclick }) =>
           }
           sortable.handleAdd(addInput);
           setAddInput("");
+          setConfirmVisible(false);
         }
       }
     };
