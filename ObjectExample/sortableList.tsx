@@ -36,14 +36,14 @@ const SortableList = ({ datalist }) => {
   const [data, setData] = useState(datalist);
 
   const sensors = useSensors(
-  useSensor(PointerSensor),
-  useSensor(KeyboardSensor, {
-    coordinateGetter: sortableKeyboardCoordinates,
-  })
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
   );
 
   let arr = [];
-  datalist.map((item) => arr = [...arr, item.name])
+  datalist && datalist.map((item) => arr = [...arr, item.name])
 
   const handleRemove = (id) => {
     setData((datalist) => datalist.filter((item) => item.name !== id))
