@@ -25,6 +25,6 @@ export default function UsageExample() {
   ];
   
   return (
-    <SortableList data={data} />
+    <SortableList datalist={data} />
   );
 }
