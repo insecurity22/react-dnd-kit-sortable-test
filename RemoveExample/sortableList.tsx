@@ -14,9 +14,9 @@ import { useState } from "react";
 import SortableItem from "./sortableItem";
 import { SortableBaseStyle } from "./style";
 
-const SortableList = (props) => {
+const SortableList = ({ data }) => {
   // example. props.data = [1, 2, 3]
-  const [items, setItems] = useState(props.data);
+  const [items, setItems] = useState(data);
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
@@ -24,8 +24,7 @@ const SortableList = (props) => {
     })
   );
 
-  const handleRemove = (id) =>
-    setItems((items) => items.filter((item) => item !== id));
+  const handleRemove = (id) => setItems((items) => items.filter((item) => item !== id));
   const handleDragEnd = (event) => {
     const { active, over } = event;
     if (active.id !== over.id) {
