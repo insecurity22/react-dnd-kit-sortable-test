@@ -1,0 +1,10 @@
+input {
+    font-size: 1rem;
+    width: 100%;
+    padding: 6px 10px;
+    color: #303030;
+    border: 1px solid #e6e6e6;
+}
+.mr-3 {
+    margin-right: 0.75rem;
+}
