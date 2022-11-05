@@ -6,6 +6,6 @@ sortable(obj) : https://codesandbox.io/s/sortable-removeobj-add-ppghuz
 
 ![img](./BasicExample/img.png)
 
-![img](./RemoveExample/img.png)
+<img width="600" alt="img" src="./RemoveArrExample/img.png">
 
 ![img](./Example/img.png)
