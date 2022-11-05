@@ -15,7 +15,6 @@ import SortableItem from "./sortableItem";
 import { SortableBaseStyle } from "./style";
 
 const SortableList = ({ datalist }) => {
-
   const [items, setItems] = useState(datalist);
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -24,7 +23,8 @@ const SortableList = ({ datalist }) => {
     })
   );
 
-  const handleRemove = (id) => setItems((items) => items.filter((item) => item !== id));
+  const handleRemove = (id) =>
+    setItems((items) => items.filter((item) => item !== id));
   const handleDragEnd = (event) => {
     const { active, over } = event;
     if (active.id !== over.id) {
@@ -42,11 +42,7 @@ const SortableList = ({ datalist }) => {
       <SortableContext items={items}>
         <SortableBaseStyle>
           {items.map((item, index) => (
-            <SortableItem
-              key={item}
-              id={item}
-              onRemove={handleRemove}
-            />
+            <SortableItem key={item} id={item} onRemove={handleRemove} />
           ))}
         </SortableBaseStyle>
       </SortableContext>
